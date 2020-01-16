@@ -8,7 +8,7 @@ const schema = new mongoose.Schema({
     required: true
   },
   phoneNumber: { type: Number, required: true },
-  profileImages: [Schema.Types.ObjectId],
+  profileImages: [{ type: Schema.Types.ObjectId, ref: 'file' }],
   createdAt: {
     type: Date,
     default: Date.now
